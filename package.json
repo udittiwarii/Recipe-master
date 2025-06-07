@@ -1,9 +1,10 @@
 {
+  "homepage": "https://udittiwarii.github.io/Recipe-project-React",
   "name": "routing",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://udittiwarii.github.io/Recipe-project-React",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",

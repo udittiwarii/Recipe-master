@@ -17,15 +17,17 @@ const Navbar = () => {
     <nav className="bg-white shadow sticky top-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div className="flex items-center gap-3 text-3xl font-extrabold text-teal-600 select-none cursor-default">
             <img
-              src="/download-removebg-preview.png"
+              src={`${import.meta.env.BASE_URL}download-removebg-preview.png`}
               alt="MyRecipes Logo"
               className="w-12 h-12 object-contain"
             />
             <span>MyRecipes</span>
           </div>
 
+          {/* Desktop NavLinks */}
           <div className="hidden md:flex gap-8 text-base sm:text-lg font-medium tracking-wide">
             <NavLink className={navLinkStyles} to="/">
               Home
@@ -39,13 +41,12 @@ const Navbar = () => {
             <NavLink className={navLinkStyles} to="/about">
               About
             </NavLink>
-
-            {/* Styled Favorites Link */}
             <NavLink
               className={({ isActive }) =>
-                `flex items-center gap-1 px-3 py-1 rounded-full transition-all duration-300 ${isActive
-                  ? "bg-teal-100 text-teal-700 font-semibold border border-teal-300"
-                  : "text-gray-700 hover:text-teal-500 hover:bg-teal-50"
+                `flex items-center gap-1 px-3 py-1 rounded-full transition-all duration-300 ${
+                  isActive
+                    ? "bg-teal-100 text-teal-700 font-semibold border border-teal-300"
+                    : "text-gray-700 hover:text-teal-500 hover:bg-teal-50"
                 }`
               }
               to="/favorite"
@@ -54,7 +55,7 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -67,7 +68,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile NavLinks */}
       {isOpen && (
         <div className="md:hidden bg-white px-6 pb-6 flex flex-col gap-5 text-base font-semibold border-t border-gray-200">
           <NavLink
@@ -102,9 +103,10 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
             to="/favorite"
             className={({ isActive }) =>
-              `flex items-center gap-1 transition-all duration-300 ${isActive
-                ? "text-teal-700 font-semibold"
-                : "text-gray-700 hover:text-teal-500"
+              `flex items-center gap-1 transition-all duration-300 ${
+                isActive
+                  ? "text-teal-700 font-semibold"
+                  : "text-gray-700 hover:text-teal-500"
               }`
             }
           >
