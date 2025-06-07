@@ -26,7 +26,7 @@ const Pagenotfound = () => {
                         The page you’re looking for doesn’t exist or has been moved.
                     </p>
                     <a
-                        href="/"
+                        href="/Recipe-project-Reac"
                         className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition duration-300"
                     >
                         ⬅ Back to Home

@@ -1,13 +1,13 @@
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import { HashRouter } from 'react-router-dom'; // ✅ Changed here
+import { BrowserRouter } from 'react-router-dom'; // ✅ Changed here
 import { ToastContainer } from 'react-toastify';
 import Recipescontext from './context/Recipescontext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Recipescontext>
-    <HashRouter> {/* ✅ Changed here */}
+    <BrowserRouter basename='Recipe-project-React'>
       <App />
       <ToastContainer
         position="top-right"
@@ -19,6 +19,6 @@ createRoot(document.getElementById('root')).render(
         draggable
         theme="colored"
       />
-    </HashRouter>
+    </BrowserRouter>
   </Recipescontext>
 );
