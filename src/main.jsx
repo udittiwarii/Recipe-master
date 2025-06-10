@@ -7,7 +7,7 @@ import Recipescontext from './context/Recipescontext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Recipescontext>
-    <BrowserRouter basename='Recipe-project-React'>
+    <BrowserRouter basename='Recipe-master'>
       <App />
       <ToastContainer
         position="top-right"
